@@ -1,0 +1,29 @@
+{
+  "name": "package-finder",
+  "version": "0.0.0",
+  "description": "Finds all npm modules in your directory and detects packages that are missing from your package.json",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wzaghal/package-finder"
+  },
+  "keywords": [
+    "npm",
+    "package",
+    "search",
+    "detect",
+    "find",
+    "missing",
+    "modules",
+    "package.json"
+  ],
+  "author": "Wisam Zaghal <wisamzaghal@gmail.com> (http://wisam.io/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wzaghal/package-finder/issues"
+  },
+  "homepage": "https://github.com/wzaghal/package-finder"
+}
