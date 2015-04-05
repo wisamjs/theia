@@ -15,3 +15,4 @@ gulp.task('mocha-watch', function () {
 });
 
 gulp.task('default',['mocha-watch']);
+gulp.task('test',['mocha-ci']);
