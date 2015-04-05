@@ -1,1 +1,1 @@
-# Package-finder
+# Package-finder [![Circle CI](https://circleci.com/gh/wzaghal/package-finder.svg?style=svg)](https://circleci.com/gh/wzaghal/package-finder)
