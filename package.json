@@ -29,6 +29,7 @@
   "devDependencies": {
     "chai": "^2.2.0",
     "gulp": "^3.8.11",
+    "gulp-jsbeautifier": "0.0.8",
     "gulp-mocha": "^2.0.1",
     "lodash": "^3.6.0",
     "mocha": "^2.2.1"

@@ -12,8 +12,10 @@ var gulpFilter = require('gulp-filter');
 
 var paths = {
   sass: ['./scss/**/*.scss'],
-  js: ['gulpfile.js', 'www/app.js', 'www/sections/**/*.js','www/core/**/*.js'],
-  html: ['www/*.html', 'www/core/**/*.html','www/sections/**/*.html']
+  js: ['gulpfile.js', 'www/app.js', 'www/sections/**/*.js',
+    'www/core/**/*.js'
+  ],
+  html: ['www/*.html', 'www/core/**/*.html', 'www/sections/**/*.html']
 };
 
 var karmaVendorFiles = [
@@ -37,7 +39,7 @@ gulp.task('devServer', function () {
   });
 });
 
-gulp.task('watch',function (){
+gulp.task('watch', function () {
 
 });
 
@@ -83,4 +85,4 @@ gulp.task('karma-watch', function () {
     }));
 });
 
-gulp.task('dev', ['sass','devServer','watch']);
+gulp.task('dev', ['sass', 'devServer', 'watch']);
