@@ -34,5 +34,9 @@
     "lodash": "^3.6.0",
     "mocha": "^2.2.1",
     "q": "^1.2.0"
+  },
+  "dependencies": {
+    "chalk": "^1.0.0",
+    "inquirer": "^0.8.2",
   }
 }
