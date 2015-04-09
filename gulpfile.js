@@ -6,7 +6,7 @@ var eslint = require('gulp-eslint');
 var jsFiles = ['*.js', 'lib/**/*.js'];
 
 
-gulp.task('mocha-ci', function (cb) {
+gulp.task('mocha-ci', function () {
   return gulp.src('lib/**/*.test.js', {
       read: false
     })
