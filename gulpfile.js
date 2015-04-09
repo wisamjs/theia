@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var mocha = require('gulp-mocha');
 var prettify = require('gulp-jsbeautifier');
+var eslint = require('gulp-eslint');
 
 var jsFiles = ['*.js', 'lib/**/*.js'];
 
@@ -31,6 +32,26 @@ gulp.task('beautify:build', function () {
       config: '.jsbeautifyrc',
       mode: 'VERIFY_ONLY'
     }));
+});
+
+
+/**
+ * JavaScript Linting Task
+ */
+gulp.task('lint', function () {
+  return gulp.src(jsFiles)
+    .pipe(eslint())
+    .pipe(eslint.format());
+});
+
+/**
+ * JavaScript Build Lint Task
+ */
+gulp.task('lint:build', function () {
+  return gulp.src(jsFiles)
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failOnError());
 });
 
 gulp.task('mocha-watch', function () {
