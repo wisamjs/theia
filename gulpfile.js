@@ -59,4 +59,4 @@ gulp.task('mocha-watch', function () {
 });
 
 gulp.task('default', ['beautify', 'mocha-watch']);
-gulp.task('test', ['beautify:build', 'mocha-ci']);
+gulp.task('test', ['beautify:build', 'lint:build', 'mocha-ci']);
