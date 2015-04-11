@@ -1,2 +1,3 @@
+var argv = require('yargs').argv;
 var packageFinder = require('./lib/package-finder.js');
-packageFinder.exec('./sampleProject/');
+packageFinder.exec(argv, './sampleProject/');
