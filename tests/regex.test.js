@@ -2,7 +2,7 @@
 'use strict';
 
 var expect = require('chai').expect;
-var globalRegex = require('./regex').getRegex();
+var globalRegex = require('../lib/regex').getRegex();
 var regex = new RegExp(globalRegex.source);
 var _ = require('lodash');
 

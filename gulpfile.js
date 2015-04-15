@@ -3,11 +3,11 @@ var mocha = require('gulp-mocha');
 var prettify = require('gulp-jsbeautifier');
 var eslint = require('gulp-eslint');
 
-var jsFiles = ['*.js', 'lib/**/*.js'];
+var jsFiles = ['*.js', 'lib/**/*.js', 'tests/**/*.test.js'];
 
 
 gulp.task('mocha-ci', function () {
-  return gulp.src('lib/**/*.test.js', {
+  return gulp.src(jsFiles[2], {
       read: false
     })
     .pipe(mocha({
@@ -55,7 +55,7 @@ gulp.task('lint:build', function () {
 });
 
 gulp.task('mocha-watch', function () {
-  gulp.watch('lib/**/*.js', ['mocha-ci']);
+  gulp.watch(jsFiles, ['mocha-ci']);
 });
 
 gulp.task('default', ['beautify', 'mocha-watch']);

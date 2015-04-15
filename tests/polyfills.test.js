@@ -2,7 +2,7 @@
 'use strict';
 
 var expect = require('chai').expect;
-var polyfill = require('./polyfills');
+var polyfill = require('../lib/polyfills');
 polyfill();
 
 describe('String.endsWith polyfill', function () {

@@ -3,7 +3,7 @@
 
 var expect = require('chai').expect;
 var rewire = require('rewire');
-var helper = rewire('./package-finder-helper');
+var helper = rewire('../lib/package-finder-helper');
 var flatten;
 var isObjProp;
 var isNotObjProp;
