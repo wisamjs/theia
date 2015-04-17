@@ -1,8 +1,8 @@
 /*eslint-disable no-unused-expressions*/
 'use strict';
 
+require('../lib/polyfills');
 var expect = require('chai').expect;
-var polyfill = require('../lib/polyfills');
 
 describe('String.endsWith polyfill', function () {
   var file1 = 'file.js';
