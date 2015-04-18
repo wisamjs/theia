@@ -33,13 +33,23 @@ describe('Regex', function () {
     });
   });
 
-  it('should handle certain symbols', function () {
+  it('should handle spaces', function () {
     var regexTests = [
       'require (\'pack\'),',
       'require  (   \'pack\'  ) ;',
       'require(\'gulp-pack\')',
       'require(\'gulp-pack-4\')'
     ];
+    _.forEach(regexTests, function (test) {
+      expect(regex.test(test)).to.be.true;
+    });
+  });
+
+  it('should handle uppercase and lowercase letters', function () {
+    var regexTests = ['require(\'TEST\')', 'require(\'gulp\')',
+      'require(\'gUlP\')'
+    ];
+
     _.forEach(regexTests, function (test) {
       expect(regex.test(test)).to.be.true;
     });
