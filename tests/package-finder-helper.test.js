@@ -14,13 +14,13 @@ var install;
 var confirmInstall;
 var nonIntersect;
 var prompt;
-var mockInquirer = {};
 
-mockInquirer.prompt = function (arr, callback) {
+var mockInquirer = {
+  prompt: function (arr, callback) {
   return callback({
     selected: ['gulp']
   });
-};
+}};
 
 beforeEach(function () {
   flatten = helper.__get__('flatten');
@@ -51,7 +51,7 @@ describe('helper.isJavaScript', function () {
 });
 
 describe('helper.userAction', function () {
-  it('should be a curried function', function () {
+  it('should be a partial function', function () {
     expect(helper.userAction({})).to.be.a('function');
   });
 });
@@ -103,15 +103,15 @@ describe('isNotObjProp', function () {
     expect(isNotObjProp({})).to.be.a('function');
   });
 
-  it('should be a curried function', function () {
+  it('should be a partial function', function () {
     var deps = {
       bower: true,
       gulp: true
     };
-    var curry = isNotObjProp(deps);
-    expect(curry).to.be.a('function');
-    expect(curry('bower')).to.be.false;
-    expect(curry('mongoose')).to.be.true;
+    var partial = isNotObjProp(deps);
+    expect(partial).to.be.a('function');
+    expect(partial('bower')).to.be.false;
+    expect(partial('mongoose')).to.be.true;
 
   });
 
@@ -162,7 +162,7 @@ describe('nonIntersect', function () {
   });
 });
 
-describe('promptDeps', function () {
+describe('prompt', function () {
   it('should take two arguements and return a promise', function () {
     var mockPrompt = prompt('save', ['gulp']);
     mockPrompt.then(function (val) {
