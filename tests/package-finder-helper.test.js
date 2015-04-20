@@ -14,13 +14,15 @@ var install;
 var confirmInstall;
 var nonIntersect;
 var prompt;
+var installablePckg;
 
 var mockInquirer = {
   prompt: function (arr, callback) {
-  return callback({
-    selected: ['gulp']
-  });
-}};
+    return callback({
+      selected: ['gulp']
+    });
+  }
+};
 
 beforeEach(function () {
   flatten = helper.__get__('flatten');
@@ -33,6 +35,7 @@ beforeEach(function () {
   confirmInstall = helper.__get__('install');
   nonIntersect = helper.__get__('nonIntersect');
   prompt = helper.__get__('prompt');
+  installablePckg = helper.__get__('installablePckg');
   helper.__set__('inquirer', mockInquirer);
 });
 
@@ -115,6 +118,15 @@ describe('isNotObjProp', function () {
 
   });
 
+});
+
+describe('installablePckg', function () {
+  it('should return true if package is installable', function () {
+    expect(installablePckg('gulp')).to.be.true;
+  });
+  it('should return false if package is a built-in node package', function () {
+    expect(installablePckg('fs')).to.be.false;
+  });
 });
 
 describe('makeCheckboxObject', function () {
