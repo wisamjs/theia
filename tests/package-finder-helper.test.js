@@ -4,7 +4,6 @@
 var expect = require('chai').expect;
 var rewire = require('rewire');
 var helper = rewire('../lib/package-finder-helper');
-var flatten;
 var isObjProp;
 var isNotObjProp;
 var replaceWithName;
@@ -25,7 +24,6 @@ var mockInquirer = {
 };
 
 beforeEach(function () {
-  flatten = helper.__get__('flatten');
   isObjProp = helper.__get__('isObjProp');
   isNotObjProp = helper.__get__('isNotObjProp');
   replaceWithName = helper.__get__('replaceWithName');
@@ -82,9 +80,9 @@ describe('flatten', function () {
   ];
 
   it('should work and return an array', function () {
-    expect(flatten(arr)).to.have.length(6);
-    expect(flatten(arr)).to.be.an.instanceof(Array);
-    expect(flatten(arr)[0]).to.deep.equal('gulp-sass');
+    expect(helper.flatten(arr)).to.have.length(6);
+    expect(helper.flatten(arr)).to.be.an.instanceof(Array);
+    expect(helper.flatten(arr)[0]).to.deep.equal('gulp-sass');
   });
 });
 
