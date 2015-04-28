@@ -14,7 +14,7 @@ var confirmInstall;
 var nonIntersect;
 var prompt;
 var installablePckg;
-
+var makeUnique;
 var mockInquirer = {
   prompt: function (arr, callback) {
     return callback({
@@ -34,6 +34,7 @@ beforeEach(function () {
   nonIntersect = helper.__get__('nonIntersect');
   prompt = helper.__get__('prompt');
   installablePckg = helper.__get__('installablePckg');
+  makeUnique = helper.__get__('makeUnique');
   helper.__set__('inquirer', mockInquirer);
 });
 
@@ -139,6 +140,15 @@ describe('makeCheckboxObject', function () {
     expect(makeCheckboxObject('Tom').checked).to.deep.equal(
       false);
   });
+});
+
+describe('makeUnique', function () {
+
+  it('should remove duplicates', function () {
+    expect(makeUnique([1, 2, 1, 3, 4, 2])).to.deep.equal([1, 2, 3, 4]);
+
+  });
+
 });
 
 describe('displayMissing', function () {
