@@ -1,5 +1,5 @@
 var argv = require('yargs').argv;
 var packageFinder = require('./lib/package-finder.js');
+var path = require('path');
 
-//TODO - use path.resolve/path.join to handle all directories/files
-packageFinder.exec(argv, __dirname + '/tests/sampleProject/');
+packageFinder.exec(argv, path.join(__dirname));
