@@ -19,7 +19,6 @@
   "rules": {
     "no-alert":0,
     "no-debugger":2,
-    "no-console":2,
     "camelcase": 2,
     "curly": 2,
     "brace-style": [2, "1tbs"],
