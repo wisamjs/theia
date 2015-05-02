@@ -1,16 +1,16 @@
-# Package-finder [![Circle CI](https://circleci.com/gh/wzaghal/package-finder.svg?style=svg)](https://circleci.com/gh/wzaghal/package-finder)
+# theia [![Circle CI](https://circleci.com/gh/wzaghal/theia.svg?style=svg)](https://circleci.com/gh/wzaghal/theia)
 
 ##Description
-Package-finder looks for any published npm packages that you are requiring and checks to see if you they are available in your package.json file.
+theia looks for any published npm packages that you are requiring and checks to see if you they are available in your package.json file.
 
-Depending on the options provided, Package-finder can then display the packages, ask you to select what packages you want to install or go ahead and install them on your behalf.
+Depending on the options provided, theia can then display the packages, ask you to select what packages you want to install or go ahead and install them on your behalf.
 
 ## Install
 Still a work in progress, but this will be published to NPM soon.
 
 ## Usage
 ```
-$ package-finder
+$ theia
 
   Found 12 missing packages:
 
@@ -35,7 +35,7 @@ $ package-finder
 **--save**: Saves discovered packages as dependencies, and runs npm install.
 
 ```
-$ package-finder --save
+$ theia --save
 
 gulp-sass@1.3.3 node_modules/gulp-sass
 ├── clone@0.1.19
@@ -51,7 +51,7 @@ gulp-sass@1.3.3 node_modules/gulp-sass
 
 **--save-dev**: Saves discovered packages as dev dependencies, and runs npm install.
 ```
-$ package-finder --save-dev
+$ theia --save-dev
 
 gulp-sass@1.3.3 node_modules/gulp-sass
 ├── clone@0.1.19

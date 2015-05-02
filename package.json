@@ -1,5 +1,5 @@
 {
-  "name": "package-finder",
+  "name": "theia",
   "version": "0.0.0",
   "description": "Finds all npm modules in your directory and detects packages that are missing from your package.json",
   "scripts": {
@@ -7,11 +7,11 @@
   },
   "preferGlobal": true,
   "bin":{
-    "package-finder": "index.js"
+    "theia": "index.js"
     },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wzaghal/package-finder"
+    "url": "https://github.com/wzaghal/theia"
   },
   "keywords": [
     "npm",
@@ -26,9 +26,9 @@
   "author": "Wisam Zaghal <wisamzaghal@gmail.com> (http://wisam.io/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wzaghal/package-finder/issues"
+    "url": "https://github.com/wzaghal/theia/issues"
   },
-  "homepage": "https://github.com/wzaghal/package-finder",
+  "homepage": "https://github.com/wzaghal/theia",
   "devDependencies": {
     "chai": "^2.2.0",
     "eslint": "^0.18.0",
@@ -51,6 +51,7 @@
     "missing",
     "package",
     "finder",
+    "theia",
     "package-finder",
     "require-finder"
     ]

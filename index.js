@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
 var argv = require('yargs').argv;
-var packageFinder = require('./lib/package-finder.js');
+var theia = require('./lib/theia.js');
 
-packageFinder.exec(argv, process.cwd());
+theia.exec(argv, process.cwd());
