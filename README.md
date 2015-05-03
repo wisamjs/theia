@@ -6,8 +6,9 @@ theia looks for any published npm packages that you are requiring and checks to 
 Depending on the options provided, theia can then display the packages, ask you to select what packages you want to install or go ahead and install them on your behalf.
 
 ## Install
-Still a work in progress, but this will be published to NPM soon.
-
+```
+npm install theia -g
+```
 ## Usage
 ```
 $ theia
