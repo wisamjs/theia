@@ -33,7 +33,6 @@ $ theia
 
 
 **--save**: Saves discovered packages as dependencies, and runs npm install.
-
 ```
 $ theia --save
 
@@ -47,6 +46,7 @@ gulp-sass@1.3.3 node_modules/gulp-sass
 ```
 
 **--save -i**: Promps the user for confirmation, before saving discovered packages as dependencies and running npm install.
+![example-save-i.gif](examples/save-i.gif)
 
 
 **--save-dev**: Saves discovered packages as dev dependencies, and runs npm install.
@@ -63,6 +63,8 @@ gulp-sass@1.3.3 node_modules/gulp-sass
 
 ```
 
-**--save-dev -i**: Donec id elit non mi porta gravida at eget metus.
+**--save-dev -i**: Promps the user for confirmation, before saving discovered packages as dev dependencies and running npm install.
+![example.gif](examples/save-dev-i.gif)
 
 **--save-dev --save -i**: Promps the user to select packages that should be installed as dev dependencies, and packages that should be installed as dependencies. Runs npm install after the user makes their choices.
+![example.gif](examples/save-dev-and-save.gif)

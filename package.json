@@ -1,6 +1,6 @@
 {
   "name": "theia",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Finds all npm modules in your directory and detects packages that are missing from your package.json",
   "scripts": {
     "test": "gulp test"
@@ -52,6 +52,7 @@
     "package",
     "finder",
     "theia",
+    "require",
     "package-finder",
     "require-finder"
     ]
