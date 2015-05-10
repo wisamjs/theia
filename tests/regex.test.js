@@ -20,13 +20,14 @@ describe('Regex', function () {
     });
   });
 
-  it('should handle commas and semicolons', function () {
+  it('should handle commas and semicolons and dots', function () {
     var regexTests = [
       'require(\'pack\'),',
       'require(\'pack\')',
       'require(\'pack\');',
       ',require(\'pack\')',
-      ';require(\'pack\')'
+      ';require(\'pack\')',
+      'require(\'gulp.pack\')'
     ];
     _.forEach(regexTests, function (test) {
       expect(regex.test(test)).to.be.true;
